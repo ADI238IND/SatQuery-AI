@@ -1,0 +1,7 @@
+{
+  "project": "SatQuery AI",
+  "problem_statement": "SIH26167",
+  "generated": "2026-09-01",
+  "file_count": 64,
+  "notes": "Blueprint + starter scaffold. Raw datasets and model checkpoints intentionally excluded."
+}

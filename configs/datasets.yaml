@@ -1,0 +1,16 @@
+datasets:
+  vqa:
+    candidates: [RSVQA]
+  captioning:
+    candidates: [RSICD, NWPU-Captions]
+  grounding_detection:
+    candidates: [DOTA, DIOR]
+  change:
+    candidates: [LEVIR-CD, LEVIR-CC, LEVIR-MCI]
+  optical_sar:
+    candidates: [SEN12MS, SEN1-2]
+  demo_sources:
+    candidates:
+      - Sentinel-1 SAR
+      - Sentinel-2 optical/multispectral
+      - permitted ISRO/Bhuvan/Bhoonidhi imagery where access terms allow

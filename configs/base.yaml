@@ -1,0 +1,24 @@
+project:
+  name: SatQuery AI
+  problem_statement: SIH26167
+
+runtime:
+  device: auto
+  seed: 42
+  mixed_precision: true
+
+routing:
+  abstain_threshold: 0.55
+  multi_route_threshold: 0.70
+
+evidence_fuse:
+  min_final_confidence: 0.60
+  weights:
+    model_confidence: 0.35
+    sensor_quality: 0.20
+    grounding: 0.20
+    agreement: 0.15
+    registration: 0.10
+
+api:
+  max_upload_mb: 512

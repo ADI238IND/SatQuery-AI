@@ -1,0 +1,20 @@
+models:
+  vqa:
+    backend: placeholder
+    family_candidates:
+      - remote-sensing VLM
+      - compact general VLM adapted with LoRA
+  caption_grounding:
+    backend: placeholder
+  change:
+    backend: placeholder
+    baseline_candidates:
+      - Siamese CNN or ViT change detector
+      - ChangeChat / DeltaVLM-style bitemporal VLM baseline
+  optical_sar:
+    backend: placeholder
+    strategy:
+      - modality-specific encoders
+      - late or cross-attention fusion
+  router:
+    backend: rules-first

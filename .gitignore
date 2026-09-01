@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data and model artifacts
+data/raw/
+data/interim/
+data/processed/
+checkpoints/
+weights/
+runs/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.tif
+*.tiff
+*.jp2
+*.h5
+*.hdf5
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
