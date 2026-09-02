@@ -1,88 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SatQuery AI</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="app-shell">
-    <header class="hero">
-      <p class="tag">SIH 2026 · Remote Sensing Assistant</p>
-      <h1>SatQuery AI</h1>
-      <p class="subtitle">Upload a satellite image and ask a question about it.</p>
-    </header>
-
-    <section class="card">
-      <label class="label" for="imageUpload">1. Upload satellite image</label>
-      <label class="upload-box" for="imageUpload">
-        <span class="upload-icon">↑</span>
-        <span id="uploadText">Click here to choose an image</span>
-        <small>PNG, JPG, JPEG or TIFF</small>
-      </label>
-      <input id="imageUpload" type="file" accept="image/*,.tif,.tiff" hidden />
-
-      <div id="previewWrapper" class="preview-wrapper hidden">
-        <img id="imagePreview" alt="Selected satellite image preview" />
-      </div>
-
-      <label class="label question-label" for="question">2. Ask your question</label>
-      <textarea id="question" placeholder="Example: Describe the land cover visible in this image."></textarea>
-
-      <button id="analyzeButton" type="button">Analyze Image</button>
-    </section>
-
-    <section class="card result-card">
-      <div class="result-heading">
-        <h2>Analysis Result</h2>
-        <span id="statusBadge" class="status-badge">Waiting</span>
-      </div>
-      <div id="result" class="result-box">
-        Result will appear here after analysis.
-      </div>
-    </section>
-  </main>
-
-  <script>
-    const imageUpload = document.getElementById('imageUpload');
-    const uploadText = document.getElementById('uploadText');
-    const previewWrapper = document.getElementById('previewWrapper');
-    const imagePreview = document.getElementById('imagePreview');
-    const analyzeButton = document.getElementById('analyzeButton');
-    const question = document.getElementById('question');
-    const result = document.getElementById('result');
-    const statusBadge = document.getElementById('statusBadge');
-
-    imageUpload.addEventListener('change', () => {
-      const file = imageUpload.files[0];
-      if (!file) return;
-
-      uploadText.textContent = file.name;
-      if (file.type.startsWith('image/')) {
-        imagePreview.src = URL.createObjectURL(file);
-        previewWrapper.classList.remove('hidden');
-      } else {
-        previewWrapper.classList.add('hidden');
-      }
-    });
-
-    analyzeButton.addEventListener('click', () => {
-      if (!imageUpload.files[0]) {
-        result.textContent = 'Please upload a satellite image first.';
-        statusBadge.textContent = 'Missing image';
-        return;
-      }
-
-      if (!question.value.trim()) {
-        result.textContent = 'Please write a question first.';
-        statusBadge.textContent = 'Missing question';
-        return;
-      }
-
-      statusBadge.textContent = 'Demo mode';
-      result.textContent = 'UI is ready. Backend and AI model will be connected in the next step.';
-    });
-  </script>
-</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <title>SatQuery AI — Remote Sensing VQA & Change Detection</title>
+  </head>
+  <body class="bg-[#0A0E13] text-[#E7EBF1] antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
