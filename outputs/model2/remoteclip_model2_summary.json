@@ -1,0 +1,18 @@
+{
+  "model": "RemoteCLIP-ViT-B-32",
+  "classification": {
+    "dataset": "EuroSAT",
+    "samples": 2700,
+    "raw_labels_accuracy": 0.373,
+    "generic_prompts_accuracy": 0.3415,
+    "semantic_prompts_accuracy": 0.3659,
+    "selected_strategy": "raw class labels"
+  },
+  "retrieval": {
+    "dataset": "EuroSAT",
+    "queries": 10,
+    "raw": {"precision_at_1": 0.6, "precision_at_5": 0.6, "precision_at_10": 0.62, "map": 0.3744, "mrr": 0.7158},
+    "semantic": {"precision_at_1": 0.6, "precision_at_5": 0.64, "precision_at_10": 0.65, "map": 0.3934, "mrr": 0.7228},
+    "selected_strategy": "semantic natural-language queries"
+  }
+}

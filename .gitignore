@@ -27,6 +27,7 @@ weights/
 runs/
 wandb/
 *.pt
+!data/model2/eurosat_remoteclip_vitb32_index.pt
 *.pth
 *.ckpt
 *.safetensors
