@@ -17,6 +17,7 @@ import type {
   BandSelection,
   BoundingBox,
   TraceStep,
+  ChatMessage,
 } from './types';
 import { SOURCE_IMAGERY } from './mockData';
 
@@ -30,6 +31,8 @@ export interface InferenceRequest {
   band: BandSelection;
   drawnRois?: BoundingBox[];
   coordinates: [number, number];
+  attachedImages?: string[];
+  history?: ChatMessage[];
 }
 
 // ============================================================================
@@ -62,6 +65,8 @@ export async function executeMultimodalQuery(
         band_combination: params.band,
         user_rois: params.drawnRois || [],
         target_center: params.coordinates,
+        attached_images: params.attachedImages || [],
+        chat_history: params.history || [],
       }),
     });
 

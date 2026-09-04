@@ -152,6 +152,8 @@ const MainDashboard: React.FC = () => {
         secondarySource: activeSecondarySource,
         band,
         coordinates: activeMission.center,
+        attachedImages,
+        history: messages,
       });
 
       const assistantMsg: ChatMessage = {
