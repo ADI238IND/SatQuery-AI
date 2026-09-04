@@ -1,0 +1,8 @@
+{
+  "artifact": "eurosat_remoteclip_vitb32_index.pt",
+  "status": "restore_required",
+  "model": "RemoteCLIP-ViT-B-32",
+  "dataset": "EuroSAT",
+  "embedding_shape": [2700, 512],
+  "reason": "The binary embedding index exists only in the original Colab runtime or /content/model2_backup and was never pushed. Do not replace it with fabricated embeddings."
+}

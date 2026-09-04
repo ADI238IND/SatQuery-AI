@@ -13,6 +13,7 @@ shapely>=2.0
 geopandas>=1.0
 scikit-learn>=1.5
 torch>=2.4
+open_clip_torch>=2.26
 transformers>=4.45
 accelerate>=0.34
 peft>=0.12
