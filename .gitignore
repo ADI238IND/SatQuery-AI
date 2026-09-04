@@ -17,3 +17,5 @@ data/benchmark/images/
 .vscode/
 
 outputs/*.jsonl
+data/training/images/
+*.zip
