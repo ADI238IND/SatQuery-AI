@@ -10,7 +10,7 @@ from qwen_vl_utils import process_vision_info
 
 MODEL_ID = "Qwen/Qwen3-VL-2B-Instruct"
 
-REPO = Path("/content/SatQuery-AI")
+REPO = Path(__file__).resolve().parents[1]
 
 BENCHMARK_FILE = (
     REPO
