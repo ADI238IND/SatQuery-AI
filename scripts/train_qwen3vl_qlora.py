@@ -377,7 +377,6 @@ training_args = TrainingArguments(
 
     learning_rate=2e-4,
 
-    warmup_ratio=0.03,
 
     logging_steps=10,
 
@@ -397,7 +396,8 @@ training_args = TrainingArguments(
 
     optim="paged_adamw_8bit",
 
-    seed=42
+    warmup_steps=50,
+        seed=42
 )
 
 
